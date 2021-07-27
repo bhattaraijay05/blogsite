@@ -1,0 +1,21 @@
+{
+  "time": 1587670998983,
+  "blocks": [
+    {
+      "type": "header",
+      "data": {
+        "text": "Content Goes Here",
+        "level": 2,
+        "alignment": "center"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "text": "Remove everything and start writing your content",
+        "alignment": "center"
+      }
+    }
+  ],
+  "version": "2.17.0"
+}
