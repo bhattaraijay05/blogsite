@@ -115,7 +115,7 @@ export default function Header() {
 									<Link href="/">
 										<img
 											className="h-8 w-auto sm:h-10 cursor-pointer"
-											src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+											src="/logo.png"
 											alt="Image"
 										/>
 									</Link>
@@ -249,15 +249,15 @@ export default function Header() {
 										href="/editor"
 										className="text-base font-medium text-gray-500 hover:text-gray-900"
 									>
-										Editor
+										Add Posts
 									</Link>
 
-									<Link
+									{/* <Link
 										href="/data"
 										className="text-base font-medium text-gray-500 hover:text-gray-900"
 									>
 										Data
-									</Link>
+									</Link> */}
 								</Popover.Group>
 
 								<div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -416,7 +416,7 @@ export default function Header() {
 											<div>
 												<img
 													className="h-8 w-auto"
-													src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+													src="/logo.png"
 													alt="Workflow"
 												/>
 											</div>

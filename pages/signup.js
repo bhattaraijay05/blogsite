@@ -31,7 +31,7 @@ const signup = () => {
 			setEmail("");
 			setPassword("");
 			setDisplayName("");
-			Router.push("/");
+			Router.back();
 		} catch (error) {
 			console.log(error);
 			setError(error.message);
