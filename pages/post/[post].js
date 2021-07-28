@@ -33,6 +33,9 @@ export default function Post({ data }) {
 							{data.description}
 						</p>
 					</main>
+					<p className="mb-2 leading-relaxed">
+						By: {data.senderName}
+					</p>
 				</div>
 				{data?.image && (
 					<div className="container mx-auto flex px-5 py-4 items-center justify-center flex-col">

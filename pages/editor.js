@@ -61,10 +61,10 @@ function EditorPage() {
 				console.log("Saving failed: ", error);
 			});
 
-		await setTopic("");
-		await setDescription("");
+		setTopic("");
+		setDescription("");
 		await editor.clear();
-		await setSpinner(false);
+		setSpinner(false);
 		Router.push("/");
 	};
 
