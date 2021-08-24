@@ -4,6 +4,7 @@ import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import { useEffect, useState } from "react";
 import UserProvider from "../components/Auth/UserProvider";
+import Head from "next/head";
 //Binding events.
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -32,6 +33,19 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<>
+			<Head>
+				<title>My App</title>
+				<meta
+					name="description"
+					content="Write your blogs and share to like minded peoples"
+				/>
+				<link rel="icon" href="/favicon.ico" />
+				<script
+					data-ad-client="ca-pub-9819657337267884"
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+				></script>
+			</Head>
 			<UserProvider>
 				<div>
 					{isVisible && (
