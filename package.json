@@ -25,7 +25,6 @@
 		"@headlessui/react": "^1.1.1",
 		"@heroicons/react": "^1.0.1",
 		"autoprefixer": "^10.2.6",
-		"babel-plugin-transform-remove-console": "^6.9.4",
 		"editorjs-alert": "^1.0.3",
 		"editorjs-text-alignment-blocktune": "^1.0.2",
 		"firebase": "^8.6.0",
