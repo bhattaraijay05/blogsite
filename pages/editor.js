@@ -33,39 +33,44 @@ function EditorPage() {
 	// const user = useContext(UserContext);
 	const saveData = async (e) => {
 		e.preventDefault();
-		await setSpinner(true);
-		await editor
-			.save()
-			.then((outputData) => {
-				const dataToSave = {
-					...outputData,
-					topic: topic,
-					description: description,
-					slug: `${slugify(topic.toLowerCase())}-${Math.floor(
-						Math.random() * 1000000000000001
-					)}`,
-					category: allCategory,
-					senderName: user.displayName,
-					senderEmail: user.email,
-					senderId: user.uid,
-					postedTime: new Date(
-						firebase.firestore.Timestamp.now().seconds * 1000
-					).toLocaleDateString(),
-					senderImage: user.profileUrl
-						? user.profileUrl
-						: `https://ui-avatars.com/api/?name=${user?.displayName}&background=0D8ABC&color=fff&font-size=0.6`,
-				};
-				db.collection("items").add(dataToSave);
-			})
-			.catch((error) => {
-				console.log("Saving failed: ", error);
-			});
 
-		setTopic("");
-		setDescription("");
-		await editor.clear();
-		setSpinner(false);
-		Router.push("/");
+		if (topic !== "" && description !== "" && allCategory.length > 0) {
+			await setSpinner(true);
+			await editor
+				.save()
+				.then((outputData) => {
+					const dataToSave = {
+						...outputData,
+						topic: topic,
+						description: description,
+						slug: `${slugify(topic.toLowerCase())}-${Math.floor(
+							Math.random() * 1000000000000001
+						)}`,
+						category: allCategory,
+						senderName: user.displayName,
+						senderEmail: user.email,
+						senderId: user.uid,
+						postedTime: new Date(
+							firebase.firestore.Timestamp.now().seconds * 1000
+						).toLocaleDateString(),
+						senderImage: user.profileUrl
+							? user.profileUrl
+							: `https://ui-avatars.com/api/?name=${user?.displayName}&background=0D8ABC&color=fff&font-size=0.6`,
+					};
+					db.collection("items").add(dataToSave);
+				})
+				.catch((error) => {
+					console.log("Saving failed: ", error);
+				});
+
+			setTopic("");
+			setDescription("");
+			await editor.clear();
+			setSpinner(false);
+			Router.push("/");
+		} else {
+			alert("Please fill all to continue");
+		}
 	};
 
 	const data = {

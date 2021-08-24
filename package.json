@@ -6,12 +6,6 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"next": "latest",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"autoprefixer": "^10.2.6",
-		"postcss": "^8.3.5",
-		"tailwindcss": "^2.2.4",
 		"@editorjs/code": "^2.7.0",
 		"@editorjs/delimiter": "^1.2.0",
 		"@editorjs/editorjs": "^2.21.0",
@@ -30,14 +24,20 @@
 		"@editorjs/warning": "^1.2.0",
 		"@headlessui/react": "^1.1.1",
 		"@heroicons/react": "^1.0.1",
+		"autoprefixer": "^10.2.6",
 		"babel-plugin-transform-remove-console": "^6.9.4",
 		"editorjs-alert": "^1.0.3",
 		"editorjs-text-alignment-blocktune": "^1.0.2",
 		"firebase": "^8.6.0",
+		"next": "latest",
 		"nprogress": "^0.2.0",
+		"postcss": "^8.3.5",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
 		"react-firebase-hooks": "^3.0.4",
 		"react-infinite-scroll-component": "^6.1.0",
 		"react-spinners-kit": "^1.9.1",
-		"slugify": "^1.5.3"
+		"slugify": "^1.5.3",
+		"tailwindcss": "^2.2.4"
 	}
 }
