@@ -14,11 +14,6 @@ export default function App({ data }) {
 					content="Write your blogs and share to like minded peoples"
 				/>
 				<link rel="icon" href="/favicon.ico" />
-				<script
-					data-ad-client="ca-pub-9819657337267884"
-					async
-					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-				></script>
 			</Head>
 			<>
 				<Home />

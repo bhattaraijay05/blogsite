@@ -45,6 +45,7 @@ function MyApp({ Component, pageProps }) {
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 				></script>
+				<meta name="google-site-verification" content="-JjvHOlDmrzhGcAQQf0hBA0kQuEaU7tOnftj5RYWA_A" />
 			</Head>
 			<UserProvider>
 				<div>
