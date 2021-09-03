@@ -38,7 +38,7 @@ function EditorPage() {
 			await setSpinner(true);
 			await editor
 				.save()
-				.then((outputData) => {
+				.then(async (outputData) => {
 					const dataToSave = {
 						...outputData,
 						topic: topic,
@@ -57,7 +57,7 @@ function EditorPage() {
 							? user.profileUrl
 							: `https://ui-avatars.com/api/?name=${user?.displayName}&background=0D8ABC&color=fff&font-size=0.6`,
 					};
-					db.collection("items").add(dataToSave);
+					await db.collection("items").add(dataToSave);
 				})
 				.catch((error) => {
 					console.log("Saving failed: ", error);
